@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1czdcFW5DxynwqoDQdNQsueEOmY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.HomePageTests.testeListaDadosVeiculos">
+    <configuration name="HomePageTests.testValidarBuscaComTresOuMaisResultados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iCarros-testeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testValidarBuscaComTresOuMaisResultados" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testValidarDetalhesCarroDois_ModeloEValorIguais" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iCarros-testeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testValidarDetalhesCarroDois_ModeloEValorIguais" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testValidarDetalhesCarroUm_ModeloEValorIguais" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iCarros-testeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testValidarDetalhesCarroUm_ModeloEValorIguais" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testValidarListaDeCarrosMesmaMarcaEModelo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iCarros-testeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testValidarListaDeCarrosMesmaMarcaEModelo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testeListaDadosVeiculos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iCarros-testeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testeListaDadosVeiculos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HomePageTests.testeListaDadosVeiculos" />
+        <item itemvalue="JUnit.HomePageTests.testValidarDetalhesCarroDois_ModeloEValorIguais" />
+        <item itemvalue="JUnit.HomePageTests.testValidarDetalhesCarroUm_ModeloEValorIguais" />
+        <item itemvalue="JUnit.HomePageTests.testValidarBuscaComTresOuMaisResultados" />
+        <item itemvalue="JUnit.HomePageTests.testValidarListaDeCarrosMesmaMarcaEModelo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="" />
+      <created>1591535432287</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591535432287</updated>
+      <workItem from="1591535435258" duration="43704000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-915" y="15" key="#com.intellij.ide.util.MemberChooser" timestamp="1591570525782">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-915" y="15" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591570525782" />
+    <state x="-990" y="46" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591568253386">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-990" y="46" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591568253386" />
+    <state width="1323" height="288" key="GridCell.Tab.0.bottom" timestamp="1591582120585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1397" height="309" key="GridCell.Tab.0.bottom/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591581850091" />
+    <state width="1323" height="288" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591582120585" />
+    <state width="1323" height="288" key="GridCell.Tab.0.center" timestamp="1591582120584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1397" height="309" key="GridCell.Tab.0.center/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591581850091" />
+    <state width="1323" height="288" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591582120584" />
+    <state width="1323" height="288" key="GridCell.Tab.0.left" timestamp="1591582120584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1397" height="309" key="GridCell.Tab.0.left/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591581850090" />
+    <state width="1323" height="288" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591582120584" />
+    <state width="1323" height="288" key="GridCell.Tab.0.right" timestamp="1591582120585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1397" height="309" key="GridCell.Tab.0.right/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591581850091" />
+    <state width="1323" height="288" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591582120585" />
+    <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1591567448101">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.bottom/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591567448101" />
+    <state width="1397" height="276" key="GridCell.Tab.1.center" timestamp="1591567448101">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.center/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591567448101" />
+    <state width="1397" height="276" key="GridCell.Tab.1.left" timestamp="1591567448101">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.left/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591567448101" />
+    <state width="1397" height="276" key="GridCell.Tab.1.right" timestamp="1591567448101">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.right/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591567448101" />
+    <state x="-1190" y="-46" key="Maven.ArtifactSearchDialog" timestamp="1591579898742">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1190" y="-46" key="Maven.ArtifactSearchDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591579898742" />
+    <state x="-1240" y="-127" key="SettingsEditor" timestamp="1591540754661">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1240" y="-127" key="SettingsEditor/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591540754661" />
+    <state x="-1064" y="128" width="672" height="677" key="run.anything.popup" timestamp="1591581522592">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1064" y="128" width="672" height="677" key="run.anything.popup/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591581522592" />
+    <state x="-1057" y="46" width="672" height="678" key="search.everywhere.popup" timestamp="1591570525191">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1057" y="46" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591570525191" />
+  </component>
+</project>
