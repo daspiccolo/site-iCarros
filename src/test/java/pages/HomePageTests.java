@@ -51,6 +51,8 @@ public class HomePageTests extends BaseTests {
 
         //verificando quantidade de carros encontrados na busca
         assertTrue(homePage.contarProdutos());
+
+        //verificando se os primeiros 3 carros são da mesma marca e modelo
         assertThat(homePage.obterNomeCarro1(), Matchers.containsString(marca +" "+ modelo));
         assertThat(homePage.obterNomeCarro2(), Matchers.containsString(marca +" "+ modelo));
         assertThat(homePage.obterNomeCarro3(), Matchers.containsString(marca +" "+ modelo));

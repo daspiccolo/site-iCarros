@@ -26,7 +26,6 @@ public class BaseTests {
 
     }
 
-    @AfterAll
     public static void finalizar(){
         driver.quit();
     }

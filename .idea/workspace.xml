@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/base/BaseTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/base/BaseTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePageTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePageTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +42,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\exercicio02-irts01\src\main\resources" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -159,12 +156,24 @@
       <workItem from="1591535435258" duration="44312000" />
       <workItem from="1591650640349" duration="441000" />
       <workItem from="1591663954230" duration="1045000" />
-      <workItem from="1591724689450" duration="12321000" />
+      <workItem from="1591724689450" duration="12684000" />
     </task>
+    <task id="LOCAL-00001" summary="Adicionando testes de validação">
+      <created>1591739576638</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591739576638</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionando testes de validação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando testes de validação" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-915" y="15" key="#com.intellij.ide.util.MemberChooser" timestamp="1591570525782">
@@ -175,6 +184,10 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state x="-990" y="46" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591568253386" />
+    <state x="-1082" y="-106" key="CommitChangelistDialog2" timestamp="1591739575641">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1082" y="-106" key="CommitChangelistDialog2/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739575641" />
     <state x="-941" y="53" key="FileChooserDialogImpl" timestamp="1591651076675">
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
@@ -223,6 +236,10 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state x="-1240" y="-127" key="SettingsEditor/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591540754661" />
+    <state x="-1128" y="32" key="Vcs.Push.Dialog.v2" timestamp="1591739589107">
+      <screen x="-1440" y="-134" width="1440" height="860" />
+    </state>
+    <state x="-1128" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739589107" />
     <state x="-1012" y="123" key="com.intellij.ide.util.TipDialog" timestamp="1591650641924">
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
