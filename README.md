@@ -12,3 +12,6 @@
 #### 3) O script deve ler a lista de resultados e criar um arquivo de dados contendo marca modelo, ano, km, cor, câmbio e valor à vista de cada veiculo retornado (apenas da primeira página de retorno)
 
 #### 4) Outro script deve ler a lista de carros criada na tabela anterior, buscar pelos veiculos e validar se os dados, especialmente o valor à vista continuam os mesmos.
+
+
+![mindmap_icarros](https://user-images.githubusercontent.com/50639601/84205863-667b8f00-aa84-11ea-8e45-8fa02158543d.png)
