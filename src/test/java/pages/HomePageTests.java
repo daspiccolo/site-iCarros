@@ -5,24 +5,39 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomePageTests extends BaseTests {
 
+    String marca = "Chevrolet";
+    String modelo = "Celta";
+    String anoMinimo = "2010";
+    String anoMaximo = "2015";
+    String valorMinimo = "10";
+    String valorMaximo = "16";
+    String cidade = "Campinas - SP";
+
     @Test
-    public void testValidarListaDeCarrosMesmaMarcaEModelo() {
+    public void testValidarListaBuscaDeCarrosUsados() {
         //--Pré-condição
         carregarPaginaInicial();
 
         //Preencher campos para efetuar a busca de carros usados
         homePage.desabilitarCheckBoxZeroKm();
-        homePage.preencherMarca("Chevrolet");
-        homePage.preencherModelo("Celta");
+        homePage.preencherMarca(marca);
+        homePage.preencherModelo(modelo);
 
-        homePage.preencherAnoMinimo("2010");
-        homePage.preencherAnoMaximo("2015");
+        homePage.preencherAnoMinimo(anoMinimo);
+        homePage.preencherAnoMaximo(anoMaximo);
 
-        homePage.preencherValorMinimo("10");
-        homePage.preencherValorMaximo("16");
+        homePage.preencherValorMinimo(valorMinimo);
+        homePage.preencherValorMaximo(valorMaximo);
+        homePage.preencherCidade(cidade);
+
+        // Validar que esta sendo feito a busca apenas para carros usados
+        assertTrue(homePage.verificarCheckBoxCarrosUsados());
+        assertFalse(homePage.verificarCheckBoxCarrosNovos());
 
         //Clicar para iniciar busca
         homePage.iniciarBusca();
@@ -30,16 +45,21 @@ public class HomePageTests extends BaseTests {
 
     @Test
     public void testValidarBuscaComTresOuMaisResultados() {
+
         //--pré-condição
-        testValidarListaDeCarrosMesmaMarcaEModelo();
+        testValidarListaBuscaDeCarrosUsados();
+
         //verificando quantidade de carros encontrados na busca
-        assertThat(homePage.contarProdutos(), Matchers.is(9));
+        assertTrue(homePage.contarProdutos());
+        assertThat(homePage.obterNomeCarro1(), Matchers.containsString(marca +" "+ modelo));
+        assertThat(homePage.obterNomeCarro2(), Matchers.containsString(marca +" "+ modelo));
+        assertThat(homePage.obterNomeCarro3(), Matchers.containsString(marca +" "+ modelo));
     }
 
     @Test
     public void testValidarDetalhesCarroUm_ModeloEValorIguais() {
         //--pré-condição
-        testValidarBuscaComTresOuMaisResultados();
+        testValidarListaBuscaDeCarrosUsados();
 
         String nomeCarro1_HomePage = homePage.obterNomeCarro1();
         String precoCarro1_HomePage = homePage.obterPrecoCarro1();
@@ -58,7 +78,7 @@ public class HomePageTests extends BaseTests {
     public void testValidarDetalhesCarroDois_ModeloEValorIguais() {
 
         //--pré-condição
-        testValidarBuscaComTresOuMaisResultados();
+        testValidarListaBuscaDeCarrosUsados();
 
         String nomeCarro2_HomePage = homePage.obterNomeCarro2();
         String precoCarro2_HomePage = homePage.obterPrecoCarro2();
@@ -76,7 +96,7 @@ public class HomePageTests extends BaseTests {
     @Test
     public void testeListaDadosVeiculos() {
         //--pré-condição
-        testValidarBuscaComTresOuMaisResultados();
+        testValidarListaBuscaDeCarrosUsados();
         //Gerando Lista de ANO , KM, COR, CAMBIO
         homePage.obterListaAnoVeiculo();
     }
