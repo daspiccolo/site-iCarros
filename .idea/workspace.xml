@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="" />
+    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +160,7 @@
       <workItem from="1591535435258" duration="44312000" />
       <workItem from="1591650640349" duration="441000" />
       <workItem from="1591663954230" duration="1045000" />
-      <workItem from="1591724689450" duration="12684000" />
+      <workItem from="1591724689450" duration="13068000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionando testes de validação">
       <created>1591739576638</created>
