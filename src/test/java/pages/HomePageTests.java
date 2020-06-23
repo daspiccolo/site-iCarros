@@ -15,7 +15,7 @@ public class HomePageTests extends BaseTests {
     String anoMinimo = "2010";
     String anoMaximo = "2015";
     String valorMinimo = "10";
-    String valorMaximo = "16";
+    String valorMaximo = "22";
     String cidade = "Campinas - SP";
 
     @Test
@@ -50,9 +50,11 @@ public class HomePageTests extends BaseTests {
         testValidarListaBuscaDeCarrosUsados();
 
         //verificando quantidade de carros encontrados na busca
+        homePage.contarProdutos();
         assertTrue(homePage.contarProdutos());
 
-        //verificando se os primeiros 3 carros são da mesma marca e modelo
+
+//        verificando se os primeiros 3 carros são da mesma marca e modelo
         assertThat(homePage.obterNomeCarro1(), Matchers.containsString(marca +" "+ modelo));
         assertThat(homePage.obterNomeCarro2(), Matchers.containsString(marca +" "+ modelo));
         assertThat(homePage.obterNomeCarro3(), Matchers.containsString(marca +" "+ modelo));
@@ -64,12 +66,13 @@ public class HomePageTests extends BaseTests {
         testValidarListaBuscaDeCarrosUsados();
 
         String nomeCarro1_HomePage = homePage.obterNomeCarro1();
-        String precoCarro1_HomePage = homePage.obterPrecoCarro1();
-        CarroUmPage carroUmPage = homePage.clicarCarroUm();
+        String precoCarro1_HomePage = homePage.obterPrecoCarro1(0);
+        CarroUmPage carroUmPage = homePage.clicarCarroUm(0);
 
         String nomeCarro_CarroUmPage = carroUmPage.obterNomeCarro1();
         String precoCarro_CarroUmPage = carroUmPage.obterPrecoCarro1();
         precoCarro_CarroUmPage = precoCarro_CarroUmPage.replace("R$", "");
+
 
         //validação do Primeiro Carro Modelo e Valor
         assertThat(nomeCarro_CarroUmPage, Matchers.containsString(nomeCarro1_HomePage));
@@ -83,8 +86,8 @@ public class HomePageTests extends BaseTests {
         testValidarListaBuscaDeCarrosUsados();
 
         String nomeCarro2_HomePage = homePage.obterNomeCarro2();
-        String precoCarro2_HomePage = homePage.obterPrecoCarro2();
-        CarroDoisPage carroDoisPage = homePage.clicarCarroDois();
+        String precoCarro2_HomePage = homePage.obterPrecoCarro2(1);
+        CarroDoisPage carroDoisPage = homePage.clicarCarroDois(1);
 
         String nomeCarro_CarroDoisPage = carroDoisPage.obterNomeCarro2();
         String precoCarro_CarroDoisPage = carroDoisPage.obterPrecoCarro2();

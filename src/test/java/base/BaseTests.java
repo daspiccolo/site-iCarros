@@ -1,6 +1,8 @@
 package base;
 
-import org.junit.jupiter.api.AfterAll;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.OperatingSystem;
+import org.junit.After;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -14,19 +16,23 @@ public class BaseTests {
 
 
     @BeforeAll
-    public static void inicializar(){
-        System.setProperty("webdriver.chrome.driver", "D:\\webDrivers\\chromedriver\\83\\chromedriver.exe" );
+    public static void inicializar() {
+//        WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+        WebDriverManager.chromedriver().operatingSystem(OperatingSystem.LINUX).setup();
+//        driver = new FirefoxDriver();
+//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver" );
         driver = new ChromeDriver();
     }
 
     @BeforeEach
-    public void carregarPaginaInicial(){
+    public void carregarPaginaInicial() {
         driver.get("https://www.icarros.com.br");
         homePage = new HomePage(driver);
 
     }
 
-    public static void finalizar(){
+   @After
+    public void finalizar() {
         driver.quit();
     }
 }

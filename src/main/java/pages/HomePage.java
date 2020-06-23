@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static java.time.Duration.ofSeconds;
 
@@ -29,13 +30,9 @@ public class HomePage {
     private By selecionarValorMinimo = By.xpath("//*[@id=\"buscaForm\"]/div[3]/div[3]/div/div/div/div/div/div/input");
     private By selecionarValorMaximo = By.xpath("//*[@id=\"buscaForm\"]/div[3]/div[4]/div/div/div/div/div/div/input");
     private By btBuscar = By.xpath("//*[@id=\"buscaForm\"]/div[4]/div[2]/button");
-    private By nomeCarro1 = By.cssSelector("#ac29506180 .esquerda");
-    private By anuncios = By.cssSelector("div.badges-container");
+    private By anuncios = By.cssSelector("h2.esquerda.titulo_anuncio");
     List<WebElement> listaProdutos = new ArrayList();
-    private By nomeCarro2 = By.cssSelector("#ac29562888 > div > a > h2");
-    private By nomeCarro3 = By.cssSelector("#ac29843379 .esquerda");
-    private By precoCarro1AVista = By.cssSelector("#ac29506180 .direita");
-    private By precoCarro2AVista = By.cssSelector("#ac29562888 .direita");
+    private By precoCarroAVista = By.cssSelector("div.false h3");
     private By campoCidade = By.id("cidade");
     private By btSelecionarCidade = By.xpath("//div/span/a");
     List<WebElement> dadosVeiculos = new ArrayList<>();
@@ -43,14 +40,18 @@ public class HomePage {
 
     public void obterListaAnoVeiculo() {
         dadosVeiculos = driver.findElements(By.xpath("//ul[@class='listahorizontal']//p"));
+        List<String> marcaModelo = listaCarros();
 
         for (WebElement e : dadosVeiculos) {
             dados.add(e.getText());
 
         }
         System.out.println(dados);
-
+        for (String s : listaCarros()){
+            System.out.println(s);
+        }
     }
+
 
     public void preencherCidade(String cidade) {
         driver.findElement(btSelecionarCidade).click();
@@ -72,8 +73,8 @@ public class HomePage {
         return carroUsado;
     }
     public Boolean verificarCheckBoxCarrosNovos(){
-        Boolean carroUsado = driver.findElement(checkBoxCarrosNovos).isSelected();
-        return carroUsado;
+        Boolean carroNovo = driver.findElement(checkBoxCarrosNovos).isSelected();
+        return carroNovo;
     }
 
     public void preencherMarca(String marca) {
@@ -114,50 +115,59 @@ public class HomePage {
         driver.findElement(btBuscar).click();
     }
 
-    private void carregarListaDeCarros() {
+    private void carregarListaDeCarros()  {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         listaProdutos = driver.findElements(anuncios);
 
     }
 
-    public Boolean contarProdutos() {
+    public Boolean contarProdutos()  {
         Boolean qtdeListaVeiculos = false;
         carregarListaDeCarros();
         if (listaProdutos.size() >=3 ) qtdeListaVeiculos = true;
         return qtdeListaVeiculos;
     }
+    public List<String> listaCarros(){
+        carregarListaDeCarros();
+        List<String> carros = new ArrayList<>();
+        for(WebElement e : listaProdutos){
+            carros.add(e.getText());
+        }
+        return carros;
+    }
 
     public String obterNomeCarro1() {
-        return driver.findElement(nomeCarro1).getText();
+        return listaCarros().get(0);
     }
 
     public String obterNomeCarro2() {
-        return driver.findElement(nomeCarro2).getText();
+         return listaCarros().get(1);
     }
     public String obterNomeCarro3() {
-        return driver.findElement(nomeCarro3).getText();
+        return listaCarros().get(2);
     }
 
-    public String obterPrecoCarro1() {
-        String precoCarro1 = driver.findElement(precoCarro1AVista).getText();
+    public String obterPrecoCarro1(int indice) {
+        String precoCarro1 = driver.findElements(precoCarroAVista).get(indice).getText();
         precoCarro1 = precoCarro1.replace("preço à vista", "");
         precoCarro1 = precoCarro1.replace("R$", "");
         return precoCarro1;
     }
 
-    public String obterPrecoCarro2() {
-        String precoCarro2 = driver.findElement(precoCarro2AVista).getText();
+    public String obterPrecoCarro2(int indice) {
+        String precoCarro2 = driver.findElements(precoCarroAVista).get(indice).getText();
         precoCarro2 = precoCarro2.replace("preço à vista", "");
         precoCarro2 = precoCarro2.replace("R$", "");
         return precoCarro2;
     }
 
-    public CarroUmPage clicarCarroUm() {
-        driver.findElement(nomeCarro1).click();
+    public CarroUmPage clicarCarroUm(int indice) {
+        driver.findElements(anuncios).get(indice).click();
         return new CarroUmPage(driver);
     }
 
-    public CarroDoisPage clicarCarroDois() {
-        driver.findElement(nomeCarro2).click();
+    public CarroDoisPage clicarCarroDois(int indice) {
+        driver.findElements(anuncios).get(indice).click();
         return new CarroDoisPage(driver);
     }
 
