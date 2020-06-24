@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/site-iCarros.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f8e6d419-9198-4541-8d1a-9bb4e9236bb4" name="Default Changelist" comment="Adicionando testes de validação">
+      <change afterPath="$PROJECT_DIR$/carros.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/base/BaseTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/base/BaseTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePageTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePageTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +36,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1czdcFW5DxynwqoDQdNQsueEOmY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -86,6 +85,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomePageTests.testValidarBuscaComTresOuMaisResultados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="site-iCarros" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
+      <option name="METHOD_NAME" value="testValidarBuscaComTresOuMaisResultados" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomePageTests.testValidarDetalhesCarroDois_ModeloEValorIguais" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="site-iCarros" />
       <useClassPathOnly />
@@ -120,24 +137,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTests.testValidarListaBuscaDeCarrosUsados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="site-iCarros" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pages" />
-      <option name="MAIN_CLASS_NAME" value="pages.HomePageTests" />
-      <option name="METHOD_NAME" value="testValidarListaBuscaDeCarrosUsados" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HomePageTests.testeListaDadosVeiculos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="site-iCarros" />
       <extension name="coverage">
@@ -157,10 +156,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HomePageTests.testeListaDadosVeiculos" />
-        <item itemvalue="JUnit.HomePageTests" />
-        <item itemvalue="JUnit.HomePageTests.testValidarDetalhesCarroUm_ModeloEValorIguais" />
         <item itemvalue="JUnit.HomePageTests.testValidarDetalhesCarroDois_ModeloEValorIguais" />
-        <item itemvalue="JUnit.HomePageTests.testValidarListaBuscaDeCarrosUsados" />
+        <item itemvalue="JUnit.HomePageTests" />
+        <item itemvalue="JUnit.HomePageTests.testValidarBuscaComTresOuMaisResultados" />
+        <item itemvalue="JUnit.HomePageTests.testValidarDetalhesCarroUm_ModeloEValorIguais" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +178,8 @@
       <workItem from="1591663954230" duration="1045000" />
       <workItem from="1591724689450" duration="13068000" />
       <workItem from="1592832900294" duration="16778000" />
+      <workItem from="1592922633293" duration="5452000" />
+      <workItem from="1592943301569" duration="31322000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionando testes de validação">
       <created>1591739576638</created>
@@ -194,6 +195,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adicionando testes de validação" />
     <option name="LAST_COMMIT_MESSAGE" value="Adicionando testes de validação" />
   </component>
@@ -218,6 +220,10 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state x="-990" y="46" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591568253386" />
+    <state x="1819" y="199" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593005305816">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1819" y="199" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1593005305816" />
     <state x="1724" y="29" width="860" height="854" key="CommitChangelistDialog2" timestamp="1592922651128">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -227,30 +233,30 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state x="-941" y="53" key="FileChooserDialogImpl/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591651076675" />
-    <state width="1394" height="245" key="GridCell.Tab.0.bottom" timestamp="1592920320562">
+    <state width="1394" height="265" key="GridCell.Tab.0.bottom" timestamp="1593025007709">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1397" height="216" key="GridCell.Tab.0.bottom/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739521384" />
     <state width="1323" height="288" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591582120585" />
-    <state width="1394" height="245" key="GridCell.Tab.0.bottom/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592920320562" />
-    <state width="1394" height="245" key="GridCell.Tab.0.center" timestamp="1592920320562">
+    <state width="1394" height="265" key="GridCell.Tab.0.bottom/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1593025007709" />
+    <state width="1394" height="265" key="GridCell.Tab.0.center" timestamp="1593025007709">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1397" height="216" key="GridCell.Tab.0.center/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739521384" />
     <state width="1323" height="288" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591582120584" />
-    <state width="1394" height="245" key="GridCell.Tab.0.center/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592920320562" />
-    <state width="1394" height="245" key="GridCell.Tab.0.left" timestamp="1592920320561">
+    <state width="1394" height="265" key="GridCell.Tab.0.center/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1593025007709" />
+    <state width="1394" height="265" key="GridCell.Tab.0.left" timestamp="1593025007709">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1397" height="216" key="GridCell.Tab.0.left/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739521384" />
     <state width="1323" height="288" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591582120584" />
-    <state width="1394" height="245" key="GridCell.Tab.0.left/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592920320561" />
-    <state width="1394" height="245" key="GridCell.Tab.0.right" timestamp="1592920320562">
+    <state width="1394" height="265" key="GridCell.Tab.0.left/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1593025007709" />
+    <state width="1394" height="265" key="GridCell.Tab.0.right" timestamp="1593025007709">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1397" height="216" key="GridCell.Tab.0.right/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739521384" />
     <state width="1323" height="288" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591582120585" />
-    <state width="1394" height="245" key="GridCell.Tab.0.right/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592920320562" />
+    <state width="1394" height="265" key="GridCell.Tab.0.right/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1593025007709" />
     <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1591583569561">
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
@@ -267,10 +273,11 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state width="1397" height="276" key="GridCell.Tab.1.right/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591583569561" />
-    <state x="-1190" y="-46" key="Maven.ArtifactSearchDialog" timestamp="1591579898742">
-      <screen x="-1440" y="-134" width="1440" height="860" />
+    <state x="1616" y="92" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1592941853617">
+      <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="-1190" y="-46" key="Maven.ArtifactSearchDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591579898742" />
+    <state x="1616" y="92" width="924" height="691" key="Maven.ArtifactSearchDialog/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592941853617" />
     <state x="1566" y="7" width="1024" height="852" key="SettingsEditor" timestamp="1592834101736">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -280,11 +287,11 @@
       <screen x="-1440" y="-134" width="1440" height="860" />
     </state>
     <state x="-1128" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591739589107" />
-    <state x="1794" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1592922632500">
+    <state x="1794" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1592943301205">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="-1012" y="123" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1440.-134.1440.860@-1440.-134.1440.860" timestamp="1591650641924" />
-    <state x="1794" y="269" key="com.intellij.ide.util.TipDialog/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592922632500" />
+    <state x="1794" y="269" key="com.intellij.ide.util.TipDialog/72.27.1294.741/1366.0.1440.900@1366.0.1440.900" timestamp="1592943301205" />
     <state x="1750" y="102" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592846122469">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>

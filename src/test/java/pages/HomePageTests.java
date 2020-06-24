@@ -15,7 +15,7 @@ public class HomePageTests extends BaseTests {
     String anoMinimo = "2010";
     String anoMaximo = "2015";
     String valorMinimo = "10";
-    String valorMaximo = "22";
+    String valorMaximo = "20";
     String cidade = "Campinas - SP";
 
     @Test
@@ -55,9 +55,9 @@ public class HomePageTests extends BaseTests {
 
 
 //        verificando se os primeiros 3 carros são da mesma marca e modelo
-        assertThat(homePage.obterNomeCarro1(), Matchers.containsString(marca +" "+ modelo));
-        assertThat(homePage.obterNomeCarro2(), Matchers.containsString(marca +" "+ modelo));
-        assertThat(homePage.obterNomeCarro3(), Matchers.containsString(marca +" "+ modelo));
+        assertThat(homePage.obterNomeCarro(0), Matchers.containsString(marca +" "+ modelo));
+        assertThat(homePage.obterNomeCarro(1), Matchers.containsString(marca +" "+ modelo));
+        assertThat(homePage.obterNomeCarro(2), Matchers.containsString(marca +" "+ modelo));
     }
 
     @Test
@@ -65,8 +65,8 @@ public class HomePageTests extends BaseTests {
         //--pré-condição
         testValidarListaBuscaDeCarrosUsados();
 
-        String nomeCarro1_HomePage = homePage.obterNomeCarro1();
-        String precoCarro1_HomePage = homePage.obterPrecoCarro1(0);
+        String nomeCarro1_HomePage = homePage.obterNomeCarro(0);
+        String precoCarro1_HomePage = homePage.obterPrecoCarro(0);
         CarroUmPage carroUmPage = homePage.clicarCarroUm(0);
 
         String nomeCarro_CarroUmPage = carroUmPage.obterNomeCarro1();
@@ -85,8 +85,8 @@ public class HomePageTests extends BaseTests {
         //--pré-condição
         testValidarListaBuscaDeCarrosUsados();
 
-        String nomeCarro2_HomePage = homePage.obterNomeCarro2();
-        String precoCarro2_HomePage = homePage.obterPrecoCarro2(1);
+        String nomeCarro2_HomePage = homePage.obterNomeCarro(1);
+        String precoCarro2_HomePage = homePage.obterPrecoCarro(1);
         CarroDoisPage carroDoisPage = homePage.clicarCarroDois(1);
 
         String nomeCarro_CarroDoisPage = carroDoisPage.obterNomeCarro2();
@@ -99,10 +99,10 @@ public class HomePageTests extends BaseTests {
     }
 
     @Test
-    public void testeListaDadosVeiculos() {
+    public void testeListaDadosVeiculos() throws Exception {
         //--pré-condição
         testValidarListaBuscaDeCarrosUsados();
-        //Gerando Lista de ANO , KM, COR, CAMBIO
+        //Gerando Lista de MARCA/MODELO, ANO , KM, COR, CAMBIO
         homePage.obterListaAnoVeiculo();
     }
 }

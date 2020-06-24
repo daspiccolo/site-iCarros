@@ -1,9 +1,14 @@
 package pages;
 
+import com.opencsv.CSVWriter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import java.io.IOException;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -31,27 +36,59 @@ public class HomePage {
     private By selecionarValorMaximo = By.xpath("//*[@id=\"buscaForm\"]/div[3]/div[4]/div/div/div/div/div/div/input");
     private By btBuscar = By.xpath("//*[@id=\"buscaForm\"]/div[4]/div[2]/button");
     private By anuncios = By.cssSelector("h2.esquerda.titulo_anuncio");
-    List<WebElement> listaProdutos = new ArrayList();
+    List<WebElement> listaCarros = new ArrayList();
+    List<WebElement> listaPrecos = new ArrayList();
     private By precoCarroAVista = By.cssSelector("div.false h3");
+    private By precoCarro = By.xpath("//*[@id=\"anunciosForm\"]/ul/li/div/a/h3");
     private By campoCidade = By.id("cidade");
     private By btSelecionarCidade = By.xpath("//div/span/a");
     List<WebElement> dadosVeiculos = new ArrayList<>();
     List<String> dados = new ArrayList<>();
 
-    public void obterListaAnoVeiculo() {
+    public void obterListaAnoVeiculo() throws IOException {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         dadosVeiculos = driver.findElements(By.xpath("//ul[@class='listahorizontal']//p"));
-        List<String> marcaModelo = listaCarros();
 
-        for (WebElement e : dadosVeiculos) {
+        for (WebElement e : dadosVeiculos)
             dados.add(e.getText());
 
+        List<String[]> linhas = new ArrayList<>();
+        String[] cabecalho = {"MARCA/MODELO", "PREÇO", "Ano", "KM", "COR", "Cambio"};
+        List<String> marcaModelo = new ArrayList<>();
+        System.out.println(listaPrecoCarros().size());
+        System.out.println(listaCarros().size());
+        int j = 0;
+        for (int i = 0; i < (dados.size() - 2); i += 4) {
+            if (j < listaCarros().size()) {
+                marcaModelo.add(listaCarros().get(j));
+                marcaModelo.add(listaPrecoCarros().get(j));
+            }
+            marcaModelo.add(dados.get(i));
+            marcaModelo.add(dados.get(i + 1));
+            marcaModelo.add(dados.get(i + 2));
+            marcaModelo.add(dados.get(i + 3));
+            j++;
         }
-        System.out.println(dados);
-        for (String s : listaCarros()){
+        for (String s : marcaModelo) {
             System.out.println(s);
         }
-    }
 
+        for (int i = 0; i < (marcaModelo.size() - 2); i = i + 6) {
+            linhas.add(new String[]{marcaModelo.get(i), marcaModelo.get(i + 1),
+                    marcaModelo.get(i + 2), marcaModelo.get(i + 3), marcaModelo.get(i + 4),marcaModelo.get(i + 5)});
+
+        }
+
+        Writer writer = Files.newBufferedWriter(Paths.get("carros.csv"));
+        CSVWriter csvWriter = new CSVWriter(writer);
+
+        csvWriter.writeNext(cabecalho);
+        csvWriter.writeAll(linhas);
+
+        csvWriter.flush();
+        writer.close();
+
+    }
 
     public void preencherCidade(String cidade) {
         driver.findElement(btSelecionarCidade).click();
@@ -68,11 +105,13 @@ public class HomePage {
     public void desabilitarCheckBoxZeroKm() {
         if (driver.findElement(checkBoxCarrosNovos).isSelected()) driver.findElement(checkBoxCarrosNovos).click();
     }
-    public Boolean verificarCheckBoxCarrosUsados(){
+
+    public Boolean verificarCheckBoxCarrosUsados() {
         Boolean carroUsado = driver.findElement(checkBoxCarrosUsados).isSelected();
         return carroUsado;
     }
-    public Boolean verificarCheckBoxCarrosNovos(){
+
+    public Boolean verificarCheckBoxCarrosNovos() {
         Boolean carroNovo = driver.findElement(checkBoxCarrosNovos).isSelected();
         return carroNovo;
     }
@@ -115,50 +154,56 @@ public class HomePage {
         driver.findElement(btBuscar).click();
     }
 
-    private void carregarListaDeCarros()  {
+    private void carregarListaDeCarros() {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        listaProdutos = driver.findElements(anuncios);
+        listaCarros = driver.findElements(anuncios);
 
     }
 
-    public Boolean contarProdutos()  {
+    private void carregarListaDePrecoCarros() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        listaPrecos = driver.findElements(precoCarro);
+
+    }
+
+    public Boolean contarProdutos() {
         Boolean qtdeListaVeiculos = false;
         carregarListaDeCarros();
-        if (listaProdutos.size() >=3 ) qtdeListaVeiculos = true;
+        if (listaCarros.size() >= 3) qtdeListaVeiculos = true;
         return qtdeListaVeiculos;
     }
-    public List<String> listaCarros(){
+
+    public List<String> listaCarros() {
         carregarListaDeCarros();
         List<String> carros = new ArrayList<>();
-        for(WebElement e : listaProdutos){
+        for (WebElement e : listaCarros) {
             carros.add(e.getText());
         }
         return carros;
     }
 
-    public String obterNomeCarro1() {
-        return listaCarros().get(0);
+    public List<String> listaPrecoCarros() {
+        carregarListaDePrecoCarros();
+        List<String> precoCarros = new ArrayList<>();
+        String texto = "";
+        for (WebElement e : listaPrecos) {
+            texto = (e.getText().replace("preço à vista", ""));
+            precoCarros.add(texto);
+
+        }
+        return precoCarros;
     }
 
-    public String obterNomeCarro2() {
-         return listaCarros().get(1);
-    }
-    public String obterNomeCarro3() {
-        return listaCarros().get(2);
+    public String obterNomeCarro(int indice) {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return driver.findElements(anuncios).get(indice).getText();
     }
 
-    public String obterPrecoCarro1(int indice) {
-        String precoCarro1 = driver.findElements(precoCarroAVista).get(indice).getText();
-        precoCarro1 = precoCarro1.replace("preço à vista", "");
-        precoCarro1 = precoCarro1.replace("R$", "");
-        return precoCarro1;
-    }
-
-    public String obterPrecoCarro2(int indice) {
-        String precoCarro2 = driver.findElements(precoCarroAVista).get(indice).getText();
-        precoCarro2 = precoCarro2.replace("preço à vista", "");
-        precoCarro2 = precoCarro2.replace("R$", "");
-        return precoCarro2;
+    public String obterPrecoCarro(int indice) {
+        String precoCarro = driver.findElements(precoCarroAVista).get(indice).getText();
+        precoCarro = precoCarro.replace("preço à vista", "");
+        precoCarro = precoCarro.replace("R$", "");
+        return precoCarro;
     }
 
     public CarroUmPage clicarCarroUm(int indice) {
