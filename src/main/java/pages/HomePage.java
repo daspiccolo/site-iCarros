@@ -69,13 +69,10 @@ public class HomePage {
             marcaModelo.add(dados.get(i + 3));
             j++;
         }
-        for (String s : marcaModelo) {
-            System.out.println(s);
-        }
-
         for (int i = 0; i < (marcaModelo.size() - 2); i = i + 6) {
             linhas.add(new String[]{marcaModelo.get(i), marcaModelo.get(i + 1),
-                    marcaModelo.get(i + 2), marcaModelo.get(i + 3), marcaModelo.get(i + 4),marcaModelo.get(i + 5)});
+                    marcaModelo.get(i + 2), marcaModelo.get(i + 3),
+                    marcaModelo.get(i + 4), marcaModelo.get(i + 5)});
 
         }
 
