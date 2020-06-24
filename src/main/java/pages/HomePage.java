@@ -55,8 +55,7 @@ public class HomePage {
         List<String[]> linhas = new ArrayList<>();
         String[] cabecalho = {"MARCA/MODELO", "PREÇO", "Ano", "KM", "COR", "Cambio"};
         List<String> marcaModelo = new ArrayList<>();
-        System.out.println(listaPrecoCarros().size());
-        System.out.println(listaCarros().size());
+
         int j = 0;
         for (int i = 0; i < (dados.size() - 2); i += 4) {
             if (j < listaCarros().size()) {

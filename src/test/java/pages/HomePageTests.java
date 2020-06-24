@@ -4,6 +4,8 @@ import base.BaseTests;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -104,6 +106,9 @@ public class HomePageTests extends BaseTests {
         testValidarListaBuscaDeCarrosUsados();
         //Gerando Lista de MARCA/MODELO, ANO , KM, COR, CAMBIO
         homePage.obterListaAnoVeiculo();
+        File arquivo = new File("carros.csv");
+        //Verificando se arquivo foi criado
+        assertTrue(arquivo.exists());
     }
 }
 
